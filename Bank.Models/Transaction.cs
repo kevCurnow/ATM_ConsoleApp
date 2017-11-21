@@ -18,16 +18,17 @@ namespace Bank.Models
         public Transaction()
         {
             this.Deposits = new HashSet<Deposit>();
-            this.Withdrawals = new HashSet<Withdrawal>();
+            this.Withdrawls = new HashSet<Withdrawl>();
         }
     
         public int TransactionID { get; set; }
-        public string TransactionType { get; set; }
+        public int TransactionType { get; set; }
         public int AccountID { get; set; }
     
+        public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Deposit> Deposits { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Withdrawal> Withdrawals { get; set; }
+        public virtual ICollection<Withdrawl> Withdrawls { get; set; }
     }
 }

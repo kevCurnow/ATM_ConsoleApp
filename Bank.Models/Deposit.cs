@@ -15,8 +15,8 @@ namespace Bank.Models
     public partial class Deposit
     {
         public int DepositID { get; set; }
-        public decimal Amount { get; set; }
         public int TransactionID { get; set; }
+        public decimal Amount { get; set; }
     
         public virtual Transaction Transaction { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomerService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace ATMConsole
     {
         static void Main(string[] args)
         {
+            AuthService authService = new AuthService();
+            authService.GetAccount();
+            authService.GetPin();
+
         }
     }
 }
