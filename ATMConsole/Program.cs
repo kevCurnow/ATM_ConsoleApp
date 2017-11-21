@@ -12,9 +12,10 @@ namespace ATMConsole
         static void Main(string[] args)
         {
             AuthService authService = new AuthService();
-            authService.GetAccount();
-            authService.GetPin();
-
+            int actNum = authService.GetAccount();
+            int actPin = authService.GetPin();
+            bool isAuthed = authService.Verify(actNum, actPin);
+            Console.WriteLine($"{isAuthed}");
         }
     }
 }
