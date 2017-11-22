@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="184946929cf841cb99241a815b2687fc" Name="Diagram1">
-        <EntityTypeShape EntityType="Atm_AppModel.Account" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+      <Diagram DiagramId="2f2219cb2b9d4821ba63e2b798b08a40" Name="Diagram1">
+        <EntityTypeShape EntityType="Atm_AppModel.Account" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Atm_AppModel.Customer" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Atm_AppModel.Deposit" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Atm_AppModel.Transaction" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />

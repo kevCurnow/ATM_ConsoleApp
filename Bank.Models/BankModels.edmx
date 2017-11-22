@@ -14,6 +14,7 @@
           <Property Name="PIN" Type="int" Nullable="false" />
           <Property Name="AccountType" Type="int" Nullable="false" />
           <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="Balance" Type="money" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -140,6 +141,7 @@
           <Property Name="PIN" Type="Int32" Nullable="false" />
           <Property Name="AccountType" Type="Int32" Nullable="false" />
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="Customer" Relationship="Self.FK_dbo_Accounts_dbo_Customer_CustomerID" FromRole="Accounts" ToRole="Customers" />
           <NavigationProperty Name="Transactions" Relationship="Self.FK_dbo_Transactions_dbo_Accounts_AccountID" FromRole="Accounts" ToRole="Transactions" />
         </EntityType>
@@ -274,6 +276,7 @@
                 <ScalarProperty Name="PIN" ColumnName="PIN" />
                 <ScalarProperty Name="AccountType" ColumnName="AccountType" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

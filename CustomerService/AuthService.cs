@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomerService
+namespace Bank.Services
 { 
     public class AuthService
     {
@@ -13,7 +13,7 @@ namespace CustomerService
 
         public int GetAccount()
         {
-            Console.WriteLine("Please enter your account number");
+            Console.WriteLine("Please enter your account ID");
             int AcctNum = Int32.Parse(Console.ReadLine());
             return AcctNum;
         }
@@ -28,7 +28,7 @@ namespace CustomerService
         public bool Verify(int AcctNum, int AcctPin)
         {
             var Verified = from a in db.Accounts
-                           where a.AccountNumber == AcctNum && a.PIN == AcctPin
+                           where a.AccountID == AcctNum && a.PIN == AcctPin
                            select a;
 
             foreach (var acc in Verified)

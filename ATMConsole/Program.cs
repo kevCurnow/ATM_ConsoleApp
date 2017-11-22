@@ -1,4 +1,5 @@
-﻿using CustomerService;
+﻿using Bank.Services;
+using Bank.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,7 @@ namespace ATMConsole
     {
         static void Main(string[] args)
         {
-            AuthService authService = new AuthService();
-            int actNum = authService.GetAccount();
-            int actPin = authService.GetPin();
-            bool isAuthed = authService.Verify(actNum, actPin);
-            Console.WriteLine($"{isAuthed}");
+            BankController.RunAtm();
         }
     }
 }
